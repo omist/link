@@ -1,0 +1,1 @@
+// export isAsync = (func: Function): boolean => func.constructor.name === 'AsyncFunction';
