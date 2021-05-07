@@ -2,7 +2,7 @@ import {Node} from "../Node";
 import {Output} from "../Output";
 import {ValueTypes} from "../ValueTypes";
 
-export class Add extends Node {
+export class JoinStrings extends Node {
     static sourceTemplates = [
         {
             label: 'Joiner',
