@@ -14,7 +14,7 @@ export class FormArray extends Node {
             type: 'array'
         }
     ]
-    outputs: Output<string>[] = [new Output(this)]
+    outputs: Output<object>[] = [new Output<object>(this, 'array')]
     calculateOutputValue = async (output: number) => {
         if (output) return undefined;
         return <(string | number | boolean)[]>await this.evaluateSources()

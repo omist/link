@@ -24,7 +24,7 @@ export class Add extends Node {
             type: 'number'
         },
     ]
-    outputs: Output<string>[] = [new Output(this)]
+    outputs: Output<string>[] = [new Output(this, 'string')]
     calculateOutputValue = async (output: number) => {
         const values = <number[]>await this.evaluateSources(),
             count = values.length;

@@ -11,7 +11,7 @@ export class Egress extends Node {
         }
     ]
     static outputTemplates = []
-    outputs: Output<number>[] = [new Output(this)]
+    outputs: Output<number>[] = [new Output<any>(this, 'any')]
     calculateOutputValue = async (output: number) => output
         ? undefined
         : (<number[]>await this.evaluateSources()).reduce((a, b) => a + b);

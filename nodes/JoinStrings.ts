@@ -20,7 +20,7 @@ export class Add extends Node {
             type: 'string'
         }
     ]
-    outputs: Output<string>[] = [new Output(this)]
+    outputs: Output<string>[] = [new Output(this, 'string')]
     calculateOutputValue = async (output: number) => {
         if(output) return undefined;
         const values = <(string | number | boolean)[]>await this.evaluateSources(),

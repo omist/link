@@ -1,5 +1,6 @@
 import {Node} from "./Node";
 import {uuid} from "./uuid";
+import {ValueTypes} from "./ValueTypes";
 
 export class Output<valueType> {
     id: string = uuid();
@@ -10,5 +11,5 @@ export class Output<valueType> {
             this.node.calculateOutputValue(1);
         return this.value;
     }
-    constructor(public node: Node){}
+    constructor(public node: Node, public valueType: ValueTypes){}
 }
