@@ -1,9 +1,9 @@
 import {Node} from "./Node";
-import {uuid} from "./uuid";
+import {v4} from "uuid";
 import {ValueTypes} from "./ValueTypes";
 
 export class Output<valueType> {
-    id: string = uuid();
+    id: string = v4();
     needsUpdate: boolean = true;
     value?: valueType;
     getValue = (): valueType | undefined => {
