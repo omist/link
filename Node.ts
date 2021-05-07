@@ -10,7 +10,7 @@ export class Node {
     sources: Source<unknown>[] = [];
     evaluateSources = () => Promise.all(this.sources.map(s => s.getValue?.()));
     calculateOutputValue: (output: number) => unknown = () => null;
-    outputs: Output<unknown>[] = [];
+    //outputs: Output<unknown>[] = [];
     sourceTemplates: {
         label: string,
         accepts: ValueTypes[],
