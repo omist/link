@@ -1,1 +1,1 @@
-export type ValueTypes = 'number' | 'string' | 'boolean' | 'object' | 'array' | 'any';
+export type ValueTypes = 'number' | 'string' | 'boolean' | 'object' | 'array' | 'any' | 'unknown';

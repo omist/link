@@ -1,8 +1,8 @@
-import {Node} from "../Node";
-import {Output} from "../Output";
-import {ValueTypes} from "../ValueTypes";
+import {Node} from "../../Node";
+import {Output} from "../../Output";
+import {ValueTypes} from "../../ValueTypes";
 
-export class FormArray extends Node {
+export class Implode extends Node {
     static sourceTemplates = [{
         label: 'Item {n}',
         accepts: <ValueTypes[]>['number'],

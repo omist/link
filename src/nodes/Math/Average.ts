@@ -1,8 +1,8 @@
-import {Node} from "../Node";
-import {Output} from "../Output";
-import {ValueTypes} from "../ValueTypes";
+import {Node} from "../../Node";
+import {Output} from "../../Output";
+import {ValueTypes} from "../../ValueTypes";
 
-export class Add extends Node {
+export class Average extends Node {
     static sourceTemplates = [
         {
             label: 'Number {n}',

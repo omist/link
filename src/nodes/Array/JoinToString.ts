@@ -1,8 +1,8 @@
-import {Node} from "../Node";
-import {Output} from "../Output";
-import {ValueTypes} from "../ValueTypes";
+import {Node} from "../../Node";
+import {Output} from "../../Output";
+import {ValueTypes} from "../../ValueTypes";
 
-export class JoinStrings extends Node {
+export class JoinToString extends Node {
     static sourceTemplates = [
         {
             label: 'Joiner',

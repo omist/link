@@ -1,6 +1,6 @@
-import {Node} from "../Node";
-import {Output} from "../Output";
-import {ValueTypes} from "../ValueTypes";
+import {Node} from "../../Node";
+import {Output} from "../../Output";
+import {ValueTypes} from "../../ValueTypes";
 
 export class Add extends Node {
     static sourceTemplates = [
