@@ -13,9 +13,11 @@ export class Source<valueType> {
 }
 
 export class OutputSource<valueType> extends Source<valueType> {
+    needsUpdate = true;
     getValue = async () => {
         if (this.needsUpdate)
             this.currentValue = await this.output?.getValue();
+        //console.log('Returning OutputSource', this.currentValue, this.output?.getValue);
         return this.currentValue;
     }
     constructor(public output?: Output<valueType>){

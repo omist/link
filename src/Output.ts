@@ -6,9 +6,10 @@ export class Output<valueType> {
     id: string = v4();
     needsUpdate: boolean = true;
     value?: valueType;
-    getValue = (): valueType | undefined => {
+    getValue = async (): Promise<valueType | undefined> => {
         if(this.needsUpdate)
-            this.node.calculateOutputValue(1);
+            this.value = <any>await this.node.calculateOutputValue(this.node.outputs.indexOf(this));
+        //console.log('Returning Output', this.value);
         return this.value;
     }
     constructor(public node: Node, public valueType: ValueTypes){}
