@@ -7,6 +7,9 @@ export class Network {
         this.nodes.push(node);
         this.refreshDependentEgressNodesFor(node);
     }
+
+    getNodeById = (id: string) => this.nodes.find(n => n.id === id);
+
     nodeHasDependents = (node: Node) =>
         this.nodes.find(n => n.dependsOn(node));
 

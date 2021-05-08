@@ -1,10 +1,4 @@
-import {Node} from "./Node";
 import {Output} from "./Output";
-
-class Network {
-    nodes: Node[] = [];
-    getNodeById = (id: string) => this.nodes.find(n => n.id === id);
-}
 
 export class Source<valueType> {
     currentValue: any;
